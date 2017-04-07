@@ -1,6 +1,15 @@
 # &lt;Pointable /&gt;
+
 A dependency free React component supporting declarative pointer event binding. Compatible with the official [pointer events polyfill](https://github.com/jquery/PEP).
 Note that this component does nothing special to facilitate [pointer capture](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events#Pointer_capture).
+
+---------------------
+
+## Installation
+
+```
+npm install --save react-pointable
+```
 
 ## Basic Usage
 By default, a `<Pointable />` component just renders a `<div />`, passing through any props like `className`, `style`, non-pointer events, etc. What's special is that you can add pointer event props, react-style, and they will be properly bound. If a subsequent render adds or removes any pointer events, the internal listeners are updated accordingly.
