@@ -3,6 +3,7 @@
 // even though React doesn't support pointer events yet.
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 // A mapping of pointer event props to event names.
@@ -59,16 +60,16 @@ class Pointable extends React.Component {
 
 
 Pointable.propTypes = {
-	tagName: React.PropTypes.string.isRequired,
-	touchAction: React.PropTypes.oneOf(['auto', 'none', 'pan-x', 'pan-y', 'manipulation']).isRequired,
-	onPointerMove: React.PropTypes.func,
-	onPointerDown: React.PropTypes.func,
-	onPointerUp: React.PropTypes.func,
-	onPointerOver: React.PropTypes.func,
-	onPointerOut: React.PropTypes.func,
-	onPointerEnter: React.PropTypes.func,
-	onPointerLeave: React.PropTypes.func,
-	onPointerCancel: React.PropTypes.func
+	tagName: PropTypes.string.isRequired,
+	touchAction: PropTypes.oneOf(['auto', 'none', 'pan-x', 'pan-y', 'manipulation']).isRequired,
+	onPointerMove: PropTypes.func,
+	onPointerDown: PropTypes.func,
+	onPointerUp: PropTypes.func,
+	onPointerOver: PropTypes.func,
+	onPointerOut: PropTypes.func,
+	onPointerEnter: PropTypes.func,
+	onPointerLeave: PropTypes.func,
+	onPointerCancel: PropTypes.func
 };
 
 Pointable.defaultProps = {
