@@ -44,11 +44,14 @@
   "homepage": "https://github.com/MilllerTime/react-pointable",
   "devDependencies": {
     "babel-cli": "^6.24.0",
-    "babel-jest": "^19.0.0",
+    "babel-jest": "^20.0.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.3.2",
     "babel-preset-react": "^6.23.0",
-    "jest": "^19.0.2",
-    "react": "^15.4.2"
+    "jest": "^20.0.1",
+    "react": "^15.5.4"
+  },
+  "peerDependencies": {
+    "react": "^15.5.0"
   }
 }
