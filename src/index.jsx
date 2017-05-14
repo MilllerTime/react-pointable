@@ -25,6 +25,11 @@ const pointerEventProps = Object.keys(pointerEventMap);
 // Component with pointer events enabled (specially made for Pointer Events Polyfill)
 class Pointable extends React.Component {
 
+	constructor() {
+		super();
+		this.setRef = this.setRef.bind(this);
+	}
+
 	// When component mounts, check for pointer event listeners in props and register them manually.
 	componentDidMount() {
 		initNodeWithPE(this.pointableNode, this.props);
@@ -34,6 +39,13 @@ class Pointable extends React.Component {
 	componentDidUpdate(prevProps) {
 		updateNodeWithPE(this.pointableNode, prevProps, this.props);
 	}
+
+	setRef(node) {
+        this.pointableNode = node;
+        if(this.props.elementRef) {
+            this.props.elementRef(node);
+		}
+	};
 
 	render() {
 		// Collect unused props to pass along to rendered node.
@@ -47,11 +59,12 @@ class Pointable extends React.Component {
 		delete otherProps.children;
 		delete otherProps.tagName;
 		delete otherProps.touchAction;
+		delete otherProps.elementRef;
 
 		const El = this.props.tagName;
 
 		return (
-			<El ref={node => this.pointableNode = node} {...otherProps}>
+			<El ref={this.setRef} {...otherProps}>
 				{this.props.children}
 			</El>
 		);
@@ -62,6 +75,7 @@ class Pointable extends React.Component {
 Pointable.propTypes = {
 	tagName: PropTypes.string.isRequired,
 	touchAction: PropTypes.oneOf(['auto', 'none', 'pan-x', 'pan-y', 'manipulation']).isRequired,
+    elementRef: PropTypes.func,
 	onPointerMove: PropTypes.func,
 	onPointerDown: PropTypes.func,
 	onPointerUp: PropTypes.func,
