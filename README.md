@@ -41,10 +41,11 @@ All pointer events are supported:
 `onPointerMove`, `onPointerDown`, `onPointerUp`, `onPointerOver`, `onPointerOut`, `onPointerEnter`, `onPointerLeave`, `onPointerCancel`
 
 ## Additional Props
-`<Pointable />` accepts two special non-pointer event props:
+`<Pointable />` accepts special non-pointer event props:
 
 - `tagName [string = 'div']` - If you don't want a `<div />`  to be rendered, you can pass any valid element type and it will be rendered instead.
 - `touchAction [string = 'auto']` - When used with PEP in a browser that doesn't support pointer events, chances are the CSS property `touch-action` also isn't supported. PEP therefore supports a `touch-action` _attribute_, and this prop allows setting that in a fully declarative manner. You can read more about the PEP attribute [on its repo](https://github.com/jquery/PEP#polyfill-limitations).
+- `elementRef [function]` - Provides the generated element to a parent component. (optional)
 
 ## Example
 [Here's a CodePen using Pointable](http://codepen.io/MillerTime/pen/QKaLky/) that allows toggling between pointer and mouse events, using the same components.
