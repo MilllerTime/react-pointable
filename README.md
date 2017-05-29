@@ -1,4 +1,11 @@
 # &lt;Pointable /&gt;
+-------------------------
+
+[![Build Status](https://travis-ci.org/MilllerTime/react-pointable.svg?branch=master)](https://travis-ci.org/MilllerTime/react-pointable) [![devDependencies Status](https://david-dm.org/MilllerTime/react-pointable/dev-status.svg)](https://david-dm.org/MilllerTime/react-pointable?type=dev)
+
+[![NPM](https://nodei.co/npm/react-pointable.png)](https://nodei.co/npm/react-pointable/)
+
+-------------------------
 
 A dependency free React component supporting declarative pointer event binding.
 
