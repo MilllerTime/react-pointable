@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "Declarative pointer event binding. Works well alongside PEP.",
   "main": "lib/index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "build": "babel src -d lib",
     "test": "jest",
