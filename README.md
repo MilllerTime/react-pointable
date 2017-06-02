@@ -13,6 +13,7 @@ A dependency free React component supporting declarative pointer event binding.
 - Compatible with the official [pointer events polyfill](https://github.com/jquery/PEP) and its `touch-action` workaround.
 - Internal event listeners are kept up-to-date as pointer event handlers come and go.
 - Customizable wrapper element.
+- [TypeScript type definitions](https://www.npmjs.com/package/@types/react-pointable) on DefinitelyTyped.
 
 Note that this component does nothing special to facilitate [pointer capture](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events#Pointer_capture).
 
