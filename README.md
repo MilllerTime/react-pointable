@@ -13,7 +13,6 @@ A dependency free React component supporting declarative pointer event binding.
 - Compatible with the official [pointer events polyfill](https://github.com/jquery/PEP) and its `touch-action` workaround.
 - Internal event listeners are kept up-to-date as pointer event handlers come and go.
 - Customizable wrapper element.
-- [TypeScript type definitions](https://www.npmjs.com/package/@types/react-pointable) on DefinitelyTyped.
 
 Note that this component does nothing special to facilitate [pointer capture](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events#Pointer_capture).
 
@@ -30,6 +29,8 @@ By default, a `<Pointable />` component renders a `<div>` and passes through any
 
 When using `<Pointable />` for interactive elements, this makes managing pointer events easy:
 ```javascript
+import Pointable from 'react-pointable';
+
 <Pointable onPointerDown={() => alert('Touched!')}>
   Touch me
 </Pointable>
@@ -57,6 +58,13 @@ All pointer events are supported:
 
 ## Example
 [Here's a CodePen using Pointable](http://codepen.io/MillerTime/pen/QKaLky/) that allows toggling between pointer and mouse events, using the same components.
+
+## TypeScript Typings
+Typings for projects written in TypeScript are available on NPM:
+
+```
+npm install --save-dev @types/react-pointable
+```
 
 ## License
 MIT
