@@ -1,11 +1,7 @@
 # &lt;Pointable /&gt;
--------------------------
 
-[![Build Status](https://travis-ci.org/MilllerTime/react-pointable.svg?branch=master)](https://travis-ci.org/MilllerTime/react-pointable) [![devDependencies Status](https://david-dm.org/MilllerTime/react-pointable/dev-status.svg)](https://david-dm.org/MilllerTime/react-pointable?type=dev)
+[![npm](https://img.shields.io/npm/v/react-pointable.svg?style=flat-square)](https://www.npmjs.com/package/react-pointable) [![Travis](https://img.shields.io/travis/MilllerTime/react-pointable/master.svg?style=flat-square)](https://travis-ci.org/MilllerTime/react-pointable) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg?style=flat-square)](https://github.com/facebook/jest) [![David](https://img.shields.io/david/dev/MilllerTime/react-pointable.svg?style=flat-square)](https://david-dm.org/MilllerTime/react-pointable?type=dev)
 
-[![NPM](https://nodei.co/npm/react-pointable.png)](https://nodei.co/npm/react-pointable/)
-
--------------------------
 
 A dependency free React component supporting declarative pointer event binding.
 
@@ -21,8 +17,6 @@ Note that this component does nothing special to facilitate [pointer capture](ht
 ```
 npm install --save react-pointable
 ```
-
-Version 1.x relies on React 15.5.x and therefore the `prop-types` package. If you are on an older version of React and not using `prop-types` yet, install `react-pointable@0.1.0` instead.
 
 ## Usage
 By default, a `<Pointable />` component renders a `<div>` and passes through any non-pointer event props like `className`, `style`, etc. Any pointer event props will just work as expected.
