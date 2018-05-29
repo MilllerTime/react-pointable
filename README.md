@@ -1,9 +1,31 @@
-# &lt;Pointable /&gt;
+# &lt;Pointable /&gt; (obsolete as of React 16.4.0)
 
 [![npm](https://img.shields.io/npm/v/react-pointable.svg?style=flat-square)](https://www.npmjs.com/package/react-pointable) [![Travis](https://img.shields.io/travis/MilllerTime/react-pointable/master.svg?style=flat-square)](https://travis-ci.org/MilllerTime/react-pointable) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg?style=flat-square)](https://github.com/facebook/jest) [![David](https://img.shields.io/david/dev/MilllerTime/react-pointable.svg?style=flat-square)](https://david-dm.org/MilllerTime/react-pointable?type=dev)
 
 
 A dependency free React component supporting declarative pointer event binding.
+
+## Migrating to React 16.4+
+
+As of [React 16.4.0](https://reactjs.org/blog/2018/05/23/react-v-16-4.html), pointer events are now supported out of the box! [Custom DOM attributes](https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html) are also supported, meaning React works well with PEP in browsers that don't natively support pointer events.
+
+This component still works well pre React 16.4, but if you're upgrading it is simple to remove this component from your code. You can replace any instances of the `<Pointable>` component with a native DOM element.
+
+```javascript
+// For example, this:
+
+<Pointable onPointerDown={() => alert('Touched!')}>
+  Touch me
+</Pointable>
+
+// becomes this:
+
+<div onPointerDown={() => alert('Touched!')}>
+  Touch me
+</div>
+```
+
+## Purpose
 
 - Allows using pointer events with React today.
 - Compatible with the official [pointer events polyfill](https://github.com/jquery/PEP) and its `touch-action` workaround.
