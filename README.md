@@ -79,8 +79,9 @@ All pointer events are supported:
 Typings for projects written in TypeScript are available on NPM:
 
 ```
-npm install --save-dev @types/react-pointable
+npm install --save-dev @types/react-pointable@1.1.3
 ```
+
 
 ## License
 MIT
