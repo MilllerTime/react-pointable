@@ -76,11 +76,18 @@ All pointer events are supported:
 [Here's a CodePen using Pointable](http://codepen.io/MillerTime/pen/QKaLky/) that allows toggling between pointer and mouse events, using the same components.
 
 ## TypeScript Typings
-Typings for projects written in TypeScript are available on NPM:
+Typings for react-pointable are available on NPM.
 
+If you're using a version of React < 16.4, run
+```
+npm install --save-dev @types/react-pointable@1.1.3
+```
+If you happen to be using React 16.4+ and can't yet remove this package for some reason, you can instead run
 ```
 npm install --save-dev @types/react-pointable
 ```
+To learn more, see the discussion in the [DefinitelyTyped repo](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/26363).
+
 
 ## License
 MIT
