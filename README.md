@@ -27,7 +27,7 @@ This component still works well pre React 16.4, but if you're upgrading it is si
 
 ## Purpose
 
-- Allows using pointer events with React today.
+- Allows using pointer events with React < 16.4.
 - Compatible with the official [pointer events polyfill](https://github.com/jquery/PEP) and its `touch-action` workaround.
 - Internal event listeners are kept up-to-date as pointer event handlers come and go.
 - Customizable wrapper element.
